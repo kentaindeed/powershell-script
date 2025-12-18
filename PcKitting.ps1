@@ -54,7 +54,7 @@ function Rename-PC {
 # 3. Function to install Google Chrome
 function Install-Chrome {
     Write-Host "Checking for Google Chrome..." -ForegroundColor Cyan
-    if (Get-Command chrome -ErrorAction SilentlyContinue) {
+    if (Get-Package -Name "Google Chrome" -ErrorAction SilentlyContinue) {
         Write-Host "Google Chrome is already installed." -ForegroundColor Gray
     } else {
         Write-Host "Installing Google Chrome via winget..." -ForegroundColor Yellow
